@@ -2,6 +2,7 @@ source "http://rubygems.org"
 
 gem 'cpfy', :git => 'git://github.com/teohm/cpfy.git'
 gem 'capistrano'
+gem 'rvm-capistrano'
 gem 'capistrano-helpers'
 gem 'capistrano_colors'
 

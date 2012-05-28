@@ -73,16 +73,37 @@ Capistrano::Deploy::LocalDependency.class_eval do
   end
 end
 
-set :vars_to_check_path, [:shared, :privates]
-fetch(:vars_to_check_path, []).each do |var|
-  fetch(var, []).each do |path|
-    depend :remote, :path, path
+set :check_path_vars, [:shared, :privates]
+namespace :deploy do
+  namespace :check do
+    desc <<-DESC
+      Check if the paths stored in specified variables exist. \
+      By default, it checks for variable :shared, :privates. \
+      To change the default, overwrite variable :check_path_vars.
+    DESC
+    task :path do 
+      fetch(:check_path_vars, []).each do |var|
+        fetch(var, []).each do |path|
+          depend :remote, :path, path
+        end
+      end
+    end
+
+    desc <<-DESC
+      If ssh_options[:forward_agent] is enabled, check \
+      to ensure SSH agent in local machine has at least \
+      one identity key.
+    DESC
+    task :forward_agent do
+      if ssh_options[:forward_agent]
+        depend :local, :ssh_forward_agent_ready
+      end
+    end
   end
 end
 
-if ssh_options[:forward_agent]
-  depend :local, :ssh_forward_agent_ready
-end
+before 'deploy:check', 'deploy:check:path'
+before 'deploy:check', 'deploy:check:forward_agent'
 
 # Restart
 # -------
