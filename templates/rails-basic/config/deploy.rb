@@ -75,7 +75,7 @@ end
 
 set :check_path_vars, [:shared, :privates]
 namespace :deploy do
-  namespace :check do
+  namespace :checks do
     desc <<-DESC
       Check if the paths stored in specified variables exist. \
       By default, it checks for variable :shared, :privates. \
@@ -102,8 +102,8 @@ namespace :deploy do
   end
 end
 
-before 'deploy:check', 'deploy:check:path'
-before 'deploy:check', 'deploy:check:forward_agent'
+before 'deploy:check', 'deploy:checks:path'
+before 'deploy:check', 'deploy:checks:forward_agent'
 
 # Restart
 # -------
