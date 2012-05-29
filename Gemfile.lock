@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/teohm/capistrano-checks.git
+  revision: 7d42a4bc75cdc23ad6ba76262d15037559888325
+  specs:
+    capistrano-checks (0.0.0)
+      capistrano
+
+GIT
   remote: git://github.com/teohm/cpfy.git
   revision: 54420654c82035408fbdf4bb8f0fd5610dfa5084
   specs:
@@ -81,6 +88,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.0.0)
   capistrano
+  capistrano-checks!
   capistrano-helpers
   capistrano_colors
   cpfy!

@@ -44,66 +44,7 @@ require 'capistrano-helpers/privates'
 set :shared, %w()
 set :privates, %w(config/database.yml)
 
-require 'capistrano/recipes/deploy/remote_dependency'
-Capistrano::Deploy::RemoteDependency.class_eval do
-  def path(path, options={})
-    @message ||= "`#{path}' directory or file is missing"
-    try("test -e #{path}", options)
-    self
-  end
-
-end
-
-require 'capistrano/recipes/deploy/local_dependency'
-Capistrano::Deploy::LocalDependency.class_eval do
-  def ssh_forward_agent_ready
-    command = "ssh-add -l"
-    @message ||= "SSH agent has no keys, to add your key: ssh-add -K  OR  ssh-add -K private_key_file"
-    @success = true
-    begin
-      @configuration.logger.debug "executing \"#{command}\"" 
-      output = `#{command}`
-      @success = !output.include?("no identities")
-    rescue => ex
-      output = ex.message 
-      @success = false
-    end
-    @configuration.logger.trace "[local] #{output}"
-    self
-  end
-end
-
-set :check_path_vars, [:shared, :privates]
-namespace :deploy do
-  namespace :checks do
-    desc <<-DESC
-      Check if the paths stored in specified variables exist. \
-      By default, it checks for variable :shared, :privates. \
-      To change the default, overwrite variable :check_path_vars.
-    DESC
-    task :path do 
-      fetch(:check_path_vars, []).each do |var|
-        fetch(var, []).each do |path|
-          depend :remote, :path, path
-        end
-      end
-    end
-
-    desc <<-DESC
-      If ssh_options[:forward_agent] is enabled, check \
-      to ensure SSH agent in local machine has at least \
-      one identity key.
-    DESC
-    task :forward_agent do
-      if ssh_options[:forward_agent]
-        depend :local, :ssh_forward_agent_ready
-      end
-    end
-  end
-end
-
-before 'deploy:check', 'deploy:checks:path'
-before 'deploy:check', 'deploy:checks:forward_agent'
+require 'capistrano-checks/for/capistrano-helpers'
 
 # Restart
 # -------
