@@ -6,6 +6,13 @@ GIT
       capistrano
 
 GIT
+  remote: git://github.com/teohm/capistrano-shared.git
+  revision: d72b8e951d29b6d32501cfe722227bf4a2ac5b63
+  specs:
+    capistrano-shared (0.0.0)
+      capistrano
+
+GIT
   remote: git://github.com/teohm/cpfy.git
   revision: 54420654c82035408fbdf4bb8f0fd5610dfa5084
   specs:
@@ -90,6 +97,7 @@ DEPENDENCIES
   capistrano
   capistrano-checks!
   capistrano-helpers
+  capistrano-shared!
   capistrano_colors
   cpfy!
   jeweler (~> 1.8.3)

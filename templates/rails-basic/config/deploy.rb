@@ -45,6 +45,7 @@ set :shared, %w()
 set :privates, %w(config/database.yml)
 
 require 'capistrano-checks'
+require 'capistrano-shared'
 
 # Restart
 # -------
