@@ -1,15 +1,14 @@
 GIT
-  remote: git://github.com/teohm/capistrano-checks.git
-  revision: 7d42a4bc75cdc23ad6ba76262d15037559888325
+  remote: git://github.com/teohm/capistrano-shared-helpers.git
+  revision: 12d6b7a5634e7dd46c4b8556b71327bf04c0dfbd
   specs:
-    capistrano-checks (0.0.0)
-      capistrano
+    capistrano-shared-helpers (0.0.0)
 
 GIT
-  remote: git://github.com/teohm/capistrano-shared.git
-  revision: d72b8e951d29b6d32501cfe722227bf4a2ac5b63
+  remote: git://github.com/teohm/capistrano-ssh-helpers.git
+  revision: 434d0b78add9d70c14b43cece3911a3e029d9039
   specs:
-    capistrano-shared (0.0.0)
+    capistrano-ssh-helpers (0.0.0)
       capistrano
 
 GIT
@@ -95,9 +94,9 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 1.0.0)
   capistrano
-  capistrano-checks!
   capistrano-helpers
-  capistrano-shared!
+  capistrano-shared-helpers!
+  capistrano-ssh-helpers!
   capistrano_colors
   cpfy!
   jeweler (~> 1.8.3)

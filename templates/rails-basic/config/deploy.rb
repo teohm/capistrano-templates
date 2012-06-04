@@ -28,6 +28,8 @@ set :deploy_to, "~/#{application}"
 set :use_sudo, false
 ssh_options[:forward_agent] = true
 
+require 'capistrano-ssh-helpers'
+
 # RVM
 # ---
 set :rvm_ruby_string, "default"
@@ -44,8 +46,7 @@ require 'capistrano-helpers/privates'
 set :shared, %w()
 set :privates, %w(config/database.yml)
 
-require 'capistrano-checks'
-require 'capistrano-shared'
+require 'capistrano-shared-helpers'
 
 # Restart
 # -------

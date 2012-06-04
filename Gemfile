@@ -5,8 +5,8 @@ gem 'capistrano'
 gem 'rvm-capistrano'
 gem 'capistrano-helpers'
 gem 'capistrano_colors'
-gem 'capistrano-checks', :git => 'git://github.com/teohm/capistrano-checks.git'
-gem 'capistrano-shared', :git => 'git://github.com/teohm/capistrano-shared.git'
+gem 'capistrano-ssh-helpers', :git => 'git://github.com/teohm/capistrano-ssh-helpers.git'
+gem 'capistrano-shared-helpers', :git => 'git://github.com/teohm/capistrano-shared-helpers.git'
 
 group :development do
   gem "rdoc", "~> 3.12"
