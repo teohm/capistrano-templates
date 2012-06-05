@@ -4,13 +4,13 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "cpfy-templates-basic"
+  s.name = "capistrano-templates"
   s.version = "0.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Huiming Teo"]
-  s.date = "2012-06-04"
-  s.description = "capistrano templates"
+  s.date = "2012-06-05"
+  s.description = "A collection of commonly used Capistrano templates."
   s.email = "teohuiming@gmail.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -24,17 +24,16 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
-    "cpfy-templates-basic.gemspec",
     "lib/template.rb",
     "templates/rails-basic/config/deploy.rb",
     "templates/rails-basic/config/deploy/production.rb",
     "templates/rails-basic/config/deploy/staging.rb"
   ]
-  s.homepage = "http://github.com/teohm/cpfy-templates-basic"
+  s.homepage = "http://github.com/teohm/capistrano-templates"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.24"
-  s.summary = "capistrano templates"
+  s.summary = "A collection of commonly used Capistrano templates."
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
