@@ -1,17 +1,16 @@
-require 'capistrano_colors'
-
-# App Info
+# Fill in your info
 # ========
-#set :application, "set your application name here"
-set :application, "learndeploy"
+set :application, "set your application name here"
+set :repository,  "set your repository location here"
+server "set remote host here", :web, :app, :db, :primary => true
+set :deploy_to, "/home/deployer/#{application}"
+set :shared, %w()
+set :privates, %w(config/database.yml)
 
-# Code Repo
-# =========
-#set :repository,  "set your repository location here"
-set :repository,  "git://github.com/teohm/rails32-sample.git"
-set :scm, :git
-set :scm_verbose, true
-set :deploy_via, :remote_cache
+
+# Coloring
+# ========
+require 'capistrano_colors'
 
 # Multistage
 # ==========
@@ -19,15 +18,16 @@ set :stages, %w(staging production)
 set :default_stage, 'staging'
 require 'capistrano/ext/multistage'
 
+# Code Repository
+# =========
+set :scm, :git
+set :scm_verbose, true
+set :deploy_via, :remote_cache
+
 # Remote Server
 # =============
-#set :remote_host,  "set your remote host here"
-set :remote_host,  "learndeploy"
-server remote_host, :web, :app, :db, :primary => true
-set :deploy_to, "~/#{application}"
 set :use_sudo, false
 ssh_options[:forward_agent] = true
-
 require 'capistrano-ssh-helpers'
 
 # RVM
@@ -43,9 +43,6 @@ require 'bundler/capistrano'
 # ------------------
 require 'capistrano-helpers/shared'
 require 'capistrano-helpers/privates'
-set :shared, %w()
-set :privates, %w(config/database.yml)
-
 require 'capistrano-shared-helpers'
 
 # Restart

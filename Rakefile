@@ -14,11 +14,11 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "cpfy-templates-basic"
-  gem.homepage = "http://github.com/teohm/cpfy-templates-basic"
+  gem.name = "capistrano-templates"
+  gem.homepage = "http://github.com/teohm/capistrano-templates"
   gem.license = "MIT"
-  gem.summary = %Q{capistrano templates}
-  gem.description = %Q{capistrano templates}
+  gem.summary = %Q{A collection of commonly used Capistrano templates.}
+  gem.description = %Q{A collection of commonly used Capistrano templates.}
   gem.email = "teohuiming@gmail.com"
   gem.authors = ["Huiming Teo"]
   # dependencies defined in Gemfile
@@ -32,7 +32,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "cpfy-templates-basic #{version}"
+  rdoc.title = "capistrano-templates #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
