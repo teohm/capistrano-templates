@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Huiming Teo"]
-  s.date = "2012-06-05"
+  s.date = "2012-06-06"
   s.description = "A collection of commonly used Capistrano templates."
   s.email = "teohuiming@gmail.com"
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "capistrano-templates.gemspec",
     "lib/template.rb",
     "templates/rails-basic/config/deploy.rb",
     "templates/rails-basic/config/deploy/production.rb",
@@ -39,7 +40,7 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<cpfy>, [">= 0"])
+      s.add_runtime_dependency(%q<captify>, [">= 0"])
       s.add_runtime_dependency(%q<capistrano>, [">= 0"])
       s.add_runtime_dependency(%q<rvm-capistrano>, [">= 0"])
       s.add_runtime_dependency(%q<capistrano-helpers>, [">= 0"])
@@ -50,7 +51,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.8.3"])
     else
-      s.add_dependency(%q<cpfy>, [">= 0"])
+      s.add_dependency(%q<captify>, [">= 0"])
       s.add_dependency(%q<capistrano>, [">= 0"])
       s.add_dependency(%q<rvm-capistrano>, [">= 0"])
       s.add_dependency(%q<capistrano-helpers>, [">= 0"])
@@ -62,7 +63,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jeweler>, ["~> 1.8.3"])
     end
   else
-    s.add_dependency(%q<cpfy>, [">= 0"])
+    s.add_dependency(%q<captify>, [">= 0"])
     s.add_dependency(%q<capistrano>, [">= 0"])
     s.add_dependency(%q<rvm-capistrano>, [">= 0"])
     s.add_dependency(%q<capistrano-helpers>, [">= 0"])

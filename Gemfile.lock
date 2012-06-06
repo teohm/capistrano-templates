@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/teohm/cpfy.git
-  revision: 54420654c82035408fbdf4bb8f0fd5610dfa5084
+  remote: git://github.com/teohm/captify.git
+  revision: 6f6edb7c4e6f533349b4b93ec8f51569aabe2ac8
   specs:
-    cpfy (0.0.0)
+    captify (0.1.0)
       capistrano
 
 GEM
@@ -86,7 +86,7 @@ DEPENDENCIES
   capistrano-shared-helpers
   capistrano-ssh-helpers
   capistrano_colors
-  cpfy!
+  captify!
   jeweler (~> 1.8.3)
   rdoc (~> 3.12)
   rvm-capistrano

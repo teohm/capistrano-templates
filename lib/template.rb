@@ -1,5 +1,5 @@
-require 'cpfy/template'
+require 'captify/template'
 
-class Template < Cpfy::Template
+class Template < Captify::Template
 
 end
