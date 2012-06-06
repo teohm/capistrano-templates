@@ -1,10 +1,3 @@
-GIT
-  remote: git://github.com/teohm/captify.git
-  revision: 6f6edb7c4e6f533349b4b93ec8f51569aabe2ac8
-  specs:
-    captify (0.1.0)
-      capistrano
-
 GEM
   remote: http://rubygems.org/
   specs:
@@ -26,6 +19,8 @@ GEM
     capistrano-ssh-helpers (1.0.0)
       capistrano
     capistrano_colors (0.5.5)
+    captify (0.1.1)
+      capistrano
     eventmachine (0.12.10)
     faraday (0.7.6)
       addressable (~> 2.2)
@@ -86,7 +81,7 @@ DEPENDENCIES
   capistrano-shared-helpers
   capistrano-ssh-helpers
   capistrano_colors
-  captify!
+  captify
   jeweler (~> 1.8.3)
   rdoc (~> 3.12)
   rvm-capistrano

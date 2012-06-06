@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
-gem 'captify', :git => 'git://github.com/teohm/captify.git'
 gem 'capistrano'
+gem 'captify'
 gem 'rvm-capistrano'
 gem 'capistrano-helpers'
 gem 'capistrano_colors'
