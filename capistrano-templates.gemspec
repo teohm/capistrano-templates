@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Huiming Teo"]
-  s.date = "2012-06-06"
+  s.date = "2012-06-11"
   s.description = "A collection of commonly used Capistrano templates."
   s.email = "teohuiming@gmail.com"
   s.extra_rdoc_files = [
@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "capistrano-templates.gemspec",
-    "lib/template.rb",
+    "lib/captify_template.rb",
     "templates/rails-basic/config/deploy.rb",
     "templates/rails-basic/config/deploy/production.rb",
     "templates/rails-basic/config/deploy/staging.rb"
