@@ -1,19 +1,6 @@
 = capistrano-templates
 
-== Install
-  gem install capistrano-templates  # default template stored in this gem
-
-For bundler, add this to your Gemfile:
-
-  gem 'capistrano-templates'
-
-== Usage
-  cd my_project
-  captify .   # use default template: rails-basic
-
-== See also
-
-* captify[https://github.com/teohm/captify]
+See captify[https://github.com/teohm/captify]
 
 == Contributing to capistrano-templates
  

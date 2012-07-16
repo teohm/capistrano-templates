@@ -19,7 +19,7 @@ GEM
     capistrano-ssh-helpers (1.0.0)
       capistrano
     capistrano_colors (0.5.5)
-    captify (0.1.1)
+    captify (1.0.0)
       capistrano
     eventmachine (0.12.10)
     faraday (0.7.6)
@@ -30,7 +30,7 @@ GEM
       faraday (~> 0.7.3)
     git (1.2.5)
     hashie (1.2.0)
-    highline (1.6.12)
+    highline (1.6.13)
     http_parser.rb (0.5.3)
     i18n (0.6.0)
     jeweler (1.8.3)
