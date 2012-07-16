@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "capistrano-templates"
-  s.version = "0.2.0"
+  s.version = "1.0.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Huiming Teo"]
-  s.date = "2012-06-11"
+  s.date = "2012-07-16"
   s.description = "A collection of commonly used Capistrano templates."
   s.email = "teohuiming@gmail.com"
   s.extra_rdoc_files = [
@@ -25,10 +25,10 @@ Gem::Specification.new do |s|
     "Rakefile",
     "VERSION",
     "capistrano-templates.gemspec",
-    "lib/captify_template.rb",
-    "templates/rails-basic/config/deploy.rb",
-    "templates/rails-basic/config/deploy/production.rb",
-    "templates/rails-basic/config/deploy/staging.rb"
+    "lib/template_bundle.rb",
+    "templates/rails-base/config/deploy.rb",
+    "templates/rails-base/config/deploy/production.rb",
+    "templates/rails-base/config/deploy/staging.rb"
   ]
   s.homepage = "http://github.com/teohm/capistrano-templates"
   s.licenses = ["MIT"]
